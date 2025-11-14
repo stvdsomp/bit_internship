@@ -7,14 +7,14 @@
 nextflow run stvdsomp/pacvar \
    -r dev_personal \
    -latest \
+   -resume \
    -profile vsc_ugent \
    -process.executor local \
    --input samplesheet.csv \
-   --outdir ~/BIT11/local_output/pacvar_personal_FXN \
+   --outdir ~/BIT11/local_output/pacvar_personal_all_repeat_id \
    --fasta /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa \
    --fasta_fai /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa.fai \
    --skip_demultiplexing true \
    --intervals /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/bin/roi/PureTarget_repeat_expansion_panel_1.0.repeat_definition.GRCh38.bed \
    --workflow repeat \
-  --repeat_id FXN
-  #--cleanup False 
+   --repeat_id all
