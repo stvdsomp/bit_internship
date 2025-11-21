@@ -1,3 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
-1	70/f2adef	2963146	NFCORE_PACVAR:PACVAR:PBMM2_ALIGN (Control1_PacBio)	COMPLETED	0	2025-11-19 16:42:12.251	2m 10s	2m 10s	428.7%	18.8 GB	19.2 GB	3.1 GB	179.6 MB
-2	2c/dd51f7	2965168	NFCORE_PACVAR:PACVAR:SAMTOOLS_SORT (Control1_PacBio)	ABORTED	-	2025-11-19 16:44:22.639	-	-	-	-	-	-	-
