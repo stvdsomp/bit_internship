@@ -6,5 +6,5 @@
 nextflow run stvdsomp/pacvar \
    -r dev_personal \
    -latest \
-   -profile vsc_ugent \
-   -c my_config.config
+   -profile test,vsc_ugent \
+   -c my_config_test.config

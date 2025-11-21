@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #module swap cluster/donphan
-#sinfo
-#qsub -I -l nodes=1:ppn=8,mem=24gb,walltime=03:00:00
+#qsub -I -l nodes=1:ppn=8,mem=24gb,walltime=04:00:00
 
 nextflow run stvdsomp/pacvar \
    -r dev_personal \
@@ -11,7 +10,7 @@ nextflow run stvdsomp/pacvar \
    -profile vsc_ugent \
    -process.executor local \
    --input samplesheet.csv \
-   --outdir ~/BIT11/local_output/pacvar_personal_all_repeat_id \
+   --outdir /kyukon/home/gent/422/vsc42287/BIT11/local_output/pacvar_personal_all_repeat_id \
    --fasta /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa \
    --fasta_fai /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa.fai \
    --skip_demultiplexing true \

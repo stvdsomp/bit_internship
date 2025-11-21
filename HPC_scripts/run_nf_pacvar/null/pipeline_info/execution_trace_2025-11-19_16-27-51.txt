@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	e5/c8f7cb	2954198	NFCORE_PACVAR:PACVAR:PBMM2_ALIGN (Control1_PacBio)	ABORTED	-	2025-11-19 16:27:56.869	-	-	-	-	-	-	-
