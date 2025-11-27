@@ -9,8 +9,9 @@ import pandas as pd
 import gzip
 import re
 from openpyxl import Workbook
-from openpyxl.styles import Font, PatternFill
 from openpyxl.drawing.image import Image
+from openpyxl.styles import Font, PatternFill
+from openpyxl.cell.rich_text import CellRichText, TextBlock, InlineFont
 
 # run in bash:
 # my_env=pacvar_output_format
@@ -22,7 +23,33 @@ from openpyxl.drawing.image import Image
 def read_samplesheet(samplesheet_path):
     with open(samplesheet_path, newline='') as csvfile:
         return list(csv.DictReader(csvfile))
-    
+
+def color_motifs_in_sequence(seq, motifs, header):
+    motif_colors = ['2B8FCC','8E60D6', 'E47941','EF4D8E','F1D22E','1AA760','E64B35','F2E998']   
+    color_map = {}
+    for i in range(len(motifs)):
+        motif = motifs[i]
+        color = motif_colors[i % len(motif_colors)]  # wrap around if more motifs than colors
+        color_map[motif] = color
+    colored_seq = CellRichText()    
+
+    i = 0
+    while i < len(seq):
+        matched = False
+        for motif, color in color_map.items():
+            if seq[i:i+len(motif)] == motif:
+                colored_seq.append(TextBlock(InlineFont(color=color, b=True, rFont="Consolas"), motif))
+                i += len(motif)
+                matched = True
+                break
+        if not matched:
+            if header:
+                colored_seq.append(TextBlock(InlineFont(color="000000"), seq[i]))
+            else: 
+                colored_seq.append(TextBlock(InlineFont(color="FF0000", b=True, u="single", rFont="Consolas"), seq[i]))
+
+            i += 1
+    return colored_seq
 
 def write_report(samples,output_dir):  
 
@@ -33,7 +60,10 @@ def write_report(samples,output_dir):
         repeat_of_interest = sample['roi']
         filepath = os.path.join(output_dir, "trgt")
         vcf_file = os.path.join(filepath, f"{sample_name}.vcf.gz")
-        output_excel = os.path.join(output_dir, "output_report", f"PureTarget_{sample_name}_{repeat_of_interest}.xlsx")
+        if repeat_of_interest:
+            output_excel = os.path.join(output_dir, "output_report", f"PureTarget_{sample_name}_{repeat_of_interest}.xlsx")
+        else:
+            output_excel = os.path.join(output_dir, "output_report", f"PureTarget_{sample_name}_all_repeats.xlsx")
 
         # Extract TRGT version from VCF
         with gzip.open(vcf_file, 'rt') as f:
@@ -106,8 +136,11 @@ def write_report(samples,output_dir):
             ws.cell(row=ws.max_row, column=1).font = bold_font
             ws.append(["Position", f"{row['CHROM']}:{row['POS']}"])
             ws.cell(row=ws.max_row, column=1).font = bold_font
-            ws.append(["Expected motifs", row['MOTIFS']])
+
+            motifs_colored = color_motifs_in_sequence(seq=row['MOTIFS'], motifs=row['MOTIFS'].split(','), header=True)
+            ws.append(["Expected motifs", motifs_colored])
             ws.cell(row=ws.max_row, column=1).font = bold_font
+
             for row_idx in range(ws.max_row-2,ws.max_row+1):
                 for col_idx in range(1, 100):
                     ws.cell(row=row_idx, column=col_idx).fill = grey_fill
@@ -153,6 +186,7 @@ def write_report(samples,output_dir):
             # Loop through alleles in GT and write one row per allele
             for idx, allele_index in enumerate(allele_indices):
                 allele_seq = allele_map.get(allele_index, "")
+                allele_seq_colored = color_motifs_in_sequence(seq=allele_seq, motifs=row['MOTIFS'].split(','), header=False)
                 allele_label = f"Allele {idx+1}"            
                 row_cells = [
                     allele_label,
@@ -163,7 +197,7 @@ def write_report(samples,output_dir):
                     ms_list[idx],
                     ap_list[idx],
                     am_list[idx],
-                    allele_seq
+                    allele_seq_colored
                 ]
                 ws.append(row_cells)
             ws.append([])
