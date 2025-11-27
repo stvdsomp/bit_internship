@@ -15,5 +15,4 @@ nextflow run stvdsomp/pacvar \
    --fasta_fai /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa.fai \
    --skip_demultiplexing true \
    --intervals /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/bin/roi/PureTarget_repeat_expansion_panel_1.0.repeat_definition.GRCh38.bed \
-   --workflow repeat \
-   --repeat_id all
+   --workflow repeat
