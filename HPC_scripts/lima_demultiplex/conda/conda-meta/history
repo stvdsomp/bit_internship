@@ -1,0 +1,5 @@
+==> 2025-11-28 15:41:47 <==
+# cmd: /apps/gent/RHEL9/zen2-ib/software/Miniconda3/23.10.0-1/bin/conda create -p /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/lima_demultiplex/conda bioconda::lima
+# conda version: 23.10.0
++bioconda/linux-64::lima-2.13.0-h9ee0642_0
+# update specs: ['bioconda::lima']

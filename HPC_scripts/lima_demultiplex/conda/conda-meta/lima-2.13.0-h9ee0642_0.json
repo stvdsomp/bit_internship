@@ -1,0 +1,47 @@
+{
+  "build": "h9ee0642_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/user/gent/422/vsc42287/.conda/pkgs/lima-2.13.0-h9ee0642_0",
+  "files": [
+    "bin/lima",
+    "bin/lima-undo"
+  ],
+  "fn": "lima-2.13.0-h9ee0642_0.tar.bz2",
+  "license": "BSD-3-Clause-Clear",
+  "link": {
+    "source": "/user/gent/422/vsc42287/.conda/pkgs/lima-2.13.0-h9ee0642_0",
+    "type": 1
+  },
+  "md5": "54ec3a731dfd48d16ec1886e14f57950",
+  "name": "lima",
+  "package_tarball_full_path": "/user/gent/422/vsc42287/.conda/pkgs/lima-2.13.0-h9ee0642_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/lima",
+        "path_type": "hardlink",
+        "sha256": "038ee50c5d022cfacf8efe9fe47a455248a4d1484b2528b1559f559ff06d263b",
+        "sha256_in_prefix": "038ee50c5d022cfacf8efe9fe47a455248a4d1484b2528b1559f559ff06d263b",
+        "size_in_bytes": 5539416
+      },
+      {
+        "_path": "bin/lima-undo",
+        "path_type": "hardlink",
+        "sha256": "182db60a569f78e08ad5704ec51317471c171599e9b8df658c598bc2fd49380e",
+        "sha256_in_prefix": "182db60a569f78e08ad5704ec51317471c171599e9b8df658c598bc2fd49380e",
+        "size_in_bytes": 4399672
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconda::lima",
+  "sha256": "f989ab76b37053f4fb4c1710a0aca4c2b5f6cefa2332da15602e4c8a783fe346",
+  "size": 3628184,
+  "subdir": "linux-64",
+  "timestamp": 1740586573000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/lima-2.13.0-h9ee0642_0.tar.bz2",
+  "version": "2.13.0"
+}
