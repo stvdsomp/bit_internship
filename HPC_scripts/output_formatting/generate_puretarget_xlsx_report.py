@@ -27,6 +27,7 @@ def read_samplesheet(samplesheet_path):
 def color_motifs_in_sequence(seq, motifs, header):
     motif_colors = ['2B8FCC','8E60D6', 'E47941','EF4D8E','F1D22E','1AA760','E64B35','F2E998']   
     color_map = {}
+    motifs = sorted(motifs, key=len, reverse=True)
     for i in range(len(motifs)):
         motif = motifs[i]
         color = motif_colors[i % len(motif_colors)]  # wrap around if more motifs than colors
@@ -47,7 +48,6 @@ def color_motifs_in_sequence(seq, motifs, header):
                 colored_seq.append(TextBlock(InlineFont(color="000000"), seq[i]))
             else: 
                 colored_seq.append(TextBlock(InlineFont(color="FF0000", b=True, u="single", rFont="Consolas"), seq[i]))
-
             i += 1
     return colored_seq
 
