@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#PBS -l walltime=4:00:00
+#PBS -l walltime=6:00:00
 #PBS -l nodes=1:ppn=32
-#PBS -l mem=24gb
+#PBS -l mem=32gb
 #PBS -m abe
 #PBS -N m84299_251021_160938_s1.hifi_reads.demux
 
