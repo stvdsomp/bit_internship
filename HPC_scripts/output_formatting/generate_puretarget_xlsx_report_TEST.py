@@ -11,6 +11,7 @@ import re
 from openpyxl import Workbook
 from openpyxl.drawing.image import Image
 from openpyxl.styles import Font, PatternFill
+from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.cell.rich_text import CellRichText, TextBlock, InlineFont
 
 # run in bash:
@@ -100,33 +101,50 @@ def write_report(sample_name, repeat_of_interest, output_dir):
                 "AM": fmt_dict.get("AM","")
     })
     vcf_df = pd.DataFrame(vcf_data)
+    all_trids = sorted(vcf_df['TRID'].unique())
 
     # Create Excel workbook
     wb = Workbook()
-    ws = wb.active
-    ws.title = "report"
+    ws_menu = wb.active
+    ws_menu.title = "Menu"
 
-    # Write header
-    ws.append(["PureTarget analysis report"])
-    ws.append([f"{sample_name}"])
-    ws.append([f"TRGT v{trgt_version}"])
-    ws.append([])
-    cell = ws.cell(row=1, column=1)
-    cell.font = Font(name='Calibri', size=18, bold=True, color='FFE31B92')
-    bold_font = Font(name='Calibri', bold=True)
-    grey_fill = PatternFill(start_color='FFD3D3D3', end_color='FFD3D3D3', fill_type='solid')
-    for row in ws['A2:A3']:
-        for cell in row:
-            cell.font = bold_font
+    bold = Font(bold=True)
 
-    # Filter for specific repeat (if needed)
-    if repeat_of_interest:
-        vcf_df = vcf_df[vcf_df['TRID'] == repeat_of_interest]
-        if vcf_df.empty:
-            raise ValueError(
-                f"ERROR: repeat_id '{repeat_of_interest}' was not found in the analyzed panel.\n"
-                f"(Available TRIDs: {', '.join(sorted(vcf_df['TRID'].unique()))})"
-            )
+    ws_menu["A1"] = "PureTarget report"
+    ws_menu["A1"].font = Font(size=18, bold=True, color="663399")
+    ws_menu["A3"] = f"Sample: {sample_name}"
+    ws_menu["A4"] = f"TRGT version: {trgt_version}"
+    ws_menu["A6"] = "Select repeat:";
+    ws_menu["A6"].font = bold
+
+    # Place TRIDs in hidden helper column for dropdown list
+    ws_menu["Z1"] = "TRID_list"
+    for i,trid in enumerate(all_trids, start=2):
+    ws_menu[f"Z{i}"] = trid
+
+
+    # Create dropdown validation
+    dv = DataValidation(type="list", formula1=f"=Z2:Z{len(all_trids)+1}")
+    ws_menu.add_data_validation(dv)
+    ws_menu["B6"] = all_trids[0] # default
+    dv.add(ws_menu["B6"])
+
+
+    # Hyperlink cell
+    ws_menu["A8"] = "Go to selected repeat sheet:"
+    ws_menu["A8"].font = bold
+    ws_menu["B8"] = "Click here"
+
+
+    # Set a formula that sets hyperlink target dynamically (Excel supports this)
+    ws_menu["B8"].hyperlink = f"#'" + ws_menu["B6"].value + "'!A1"
+
+
+    # Now create sheets for each TRID
+    for trid in all_trids:
+        ws_trid = wb.create_sheet(title=trid[:31])
+        ws_trid["A1"] = f"Repeat: {trid}"
+        ws_trid["A1"].font = bold
 
     # Write summary for repeat(s) of interest
     for idx, row in vcf_df.iterrows():
