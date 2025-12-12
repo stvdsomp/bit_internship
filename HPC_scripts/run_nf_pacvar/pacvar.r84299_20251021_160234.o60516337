@@ -5,3 +5,1467 @@ Pulling stvdsomp/pacvar ...
  Already-up-to-date
 Launching `https://github.com/stvdsomp/pacvar` [jovial_newton] DSL2 - revision: a7c92c3824 [dev_karyotype]
 
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/pacvar 1.0.1
+------------------------------------------------------
+Input/output options
+  input                     : /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/samplesheet_Twist.csv
+  outdir                    : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/RUN_0XX_r84299_20251021_160234_Twist
+
+Reference genome options
+  fasta                     : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa
+  fasta_fai                 : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa.fai
+
+Institutional config options
+  config_profile_description: Configuration profile for execution of Nextflow pipelines on the VSC UGhent HPC.
+  config_profile_contact    : ict@cmgg.be
+  config_profile_url        : https://www.ugent.be/hpc/en
+
+Options specific to the repeat workflow
+  repeat_id                 : DM1_DMPK
+
+Pre-processing options that are not workflow specific
+  skip_demultiplexing       : true
+  intervals                 : /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/puretarget_analysis/roi/PureTarget_Twist_overlap.bed
+
+General workflow options
+  workflow                  : repeat
+
+Generic options
+  trace_report_suffix       : 2025-12-12_17-48-11
+
+Core Nextflow options
+  revision                  : dev_karyotype
+  runName                   : jovial_newton
+  containerEngine           : singularity
+  container.TRGT_GENOTYPE   : https://depot.galaxyproject.org/singularity/trgt:4.0.0--h9ee0642_0
+  container.TRGT_PLOT       : https://depot.galaxyproject.org/singularity/trgt:4.0.0--h9ee0642_0
+  launchDir                 : /kyukon/home/gent/422/vsc42287
+  workDir                   : /scratch/gent/vo/000/gvo00082/vsc42287/work
+  projectDir                : /user/gent/422/vsc42287/.nextflow/assets/stvdsomp/pacvar
+  userName                  : vsc42287
+  profile                   : vsc_ugent
+  configFiles               : /user/gent/422/vsc42287/.nextflow/assets/stvdsomp/pacvar/nextflow.config, /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/my_config_qsub.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+* The pipeline
+    https://doi.org/10.5281/zenodo.14813048
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/pacvar/blob/master/CITATIONS.md
+
+WARN: The following invalid input values have been detected:
+
+* --max_memory: 250 GB
+* --max_cpus: 96
+* --max_time: 3day
+
+
+WARN: Found the following unidentified headers in /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/samplesheet_Twist.csv:
+	- roi
+
+[-        ] NFC…_PACVAR:PACVAR:PBMM2_ALIGN -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+
+[-        ] NFC…_PACVAR:PACVAR:PBMM2_ALIGN -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (1)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[29/099872] NFC…N:TRGT_GENOTYPE (D2327066) | 0 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (1)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[29/099872] NFC…N:TRGT_GENOTYPE (D2327066) | 1 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 1
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 1
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (2)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[00/b0983f] NFC…N:TRGT_GENOTYPE (D2322128) | 1 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 1
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 1
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (2)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[00/b0983f] NFC…N:TRGT_GENOTYPE (D2322128) | 2 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 2
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 2
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (3)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[ba/701c21] NFC…N:TRGT_GENOTYPE (D2402599) | 2 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 2
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 2
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (3)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[ba/701c21] NFC…N:TRGT_GENOTYPE (D2402599) | 3 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 3
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 3
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (4)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[e5/5e2396] NFC…N:TRGT_GENOTYPE (D2513633) | 3 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 3
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 3
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (4)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[e5/5e2396] NFC…N:TRGT_GENOTYPE (D2513633) | 4 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 4
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 4
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (5)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[3c/245696] NFC…N:TRGT_GENOTYPE (D2404852) | 4 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 4
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 4
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (5)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[3c/245696] NFC…N:TRGT_GENOTYPE (D2404852) | 5 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 5
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 5
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (6)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[b4/c3710b] NFC…N:TRGT_GENOTYPE (D2518587) | 5 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 5
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 5
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (6)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[b4/c3710b] NFC…N:TRGT_GENOTYPE (D2518587) | 6 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 6
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 6
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (7)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[68/4e7d6e] NFC…N:TRGT_GENOTYPE (D2513567) | 6 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 6
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 6
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (7)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[68/4e7d6e] NFC…N:TRGT_GENOTYPE (D2513567) | 7 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 7
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 7
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (8)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 7 of 8
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 7
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 7
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (8)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT | 0 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (9)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 0 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (9)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 0 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (9)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (10)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (10)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 0 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (10)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[5b/d1c072] NFC…N:BCFTOOLS_SORT (D2327066) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (11)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (11)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 1 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 1
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (11)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[41/a122eb] NFC…TOOLS_SORT_TRGT (D2327066) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (12)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (12)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 1 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 1
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (12)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[6c/25e636] NFC…N:BCFTOOLS_SORT (D2322128) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (13)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (13)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 2 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 2
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (13)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[26/761201] NFC…TOOLS_SORT_TRGT (D2322128) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 3 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 3
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (14)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[17/2b3ca4] NFC…TOOLS_SORT_TRGT (D2402599) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 3 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 3
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (14)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[17/2b3ca4] NFC…TOOLS_SORT_TRGT (D2402599) | 2 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 2
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 3 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 3
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (14)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[17/2b3ca4] NFC…TOOLS_SORT_TRGT (D2402599) | 3 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 3
+[da/a249d9] NFC…N:BCFTOOLS_SORT (D2402599) | 3 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 3
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (15)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[17/2b3ca4] NFC…TOOLS_SORT_TRGT (D2402599) | 3 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 3
+[85/0bc781] NFC…N:BCFTOOLS_SORT (D2513633) | 3 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 3
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (15)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[17/2b3ca4] NFC…TOOLS_SORT_TRGT (D2402599) | 3 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 3
+[85/0bc781] NFC…N:BCFTOOLS_SORT (D2513633) | 4 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 4
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (16)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c0/f9244b] NFC…TOOLS_SORT_TRGT (D2513633) | 3 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 3
+[85/0bc781] NFC…N:BCFTOOLS_SORT (D2513633) | 4 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 4
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (16)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c0/f9244b] NFC…TOOLS_SORT_TRGT (D2513633) | 4 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 4
+[85/0bc781] NFC…N:BCFTOOLS_SORT (D2513633) | 4 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 4
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (17)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c0/f9244b] NFC…TOOLS_SORT_TRGT (D2513633) | 4 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 4
+[87/31da5e] NFC…N:BCFTOOLS_SORT (D2404852) | 4 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 4
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (17)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c0/f9244b] NFC…TOOLS_SORT_TRGT (D2513633) | 4 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 4
+[87/31da5e] NFC…N:BCFTOOLS_SORT (D2404852) | 5 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 5
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (18)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[eb/49ffab] NFC…TOOLS_SORT_TRGT (D2404852) | 4 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 4
+[87/31da5e] NFC…N:BCFTOOLS_SORT (D2404852) | 5 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 5
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (18)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[eb/49ffab] NFC…TOOLS_SORT_TRGT (D2404852) | 4 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 4
+[87/31da5e] NFC…N:BCFTOOLS_SORT (D2404852) | 5 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 5
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (18)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[eb/49ffab] NFC…TOOLS_SORT_TRGT (D2404852) | 5 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 5
+[87/31da5e] NFC…N:BCFTOOLS_SORT (D2404852) | 5 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 5
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (19)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[eb/49ffab] NFC…TOOLS_SORT_TRGT (D2404852) | 5 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 5
+[a2/b548f8] NFC…N:BCFTOOLS_SORT (D2518587) | 5 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 5
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (19)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[eb/49ffab] NFC…TOOLS_SORT_TRGT (D2404852) | 5 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 5
+[a2/b548f8] NFC…N:BCFTOOLS_SORT (D2518587) | 6 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 6
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (20)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[58/a5bc24] NFC…TOOLS_SORT_TRGT (D2518587) | 5 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 5
+[a2/b548f8] NFC…N:BCFTOOLS_SORT (D2518587) | 6 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 6
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (20)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[58/a5bc24] NFC…TOOLS_SORT_TRGT (D2518587) | 6 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 6
+[a2/b548f8] NFC…N:BCFTOOLS_SORT (D2518587) | 6 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 6
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (21)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[58/a5bc24] NFC…TOOLS_SORT_TRGT (D2518587) | 6 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 6
+[aa/1169cb] NFC…N:BCFTOOLS_SORT (D2513567) | 6 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 6
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (21)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[58/a5bc24] NFC…TOOLS_SORT_TRGT (D2518587) | 6 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 6
+[aa/1169cb] NFC…N:BCFTOOLS_SORT (D2513567) | 7 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 7
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (22)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[43/6cd4f2] NFC…TOOLS_SORT_TRGT (D2513567) | 6 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 6
+[aa/1169cb] NFC…N:BCFTOOLS_SORT (D2513567) | 7 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 7
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (22)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[43/6cd4f2] NFC…TOOLS_SORT_TRGT (D2513567) | 7 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 7
+[aa/1169cb] NFC…N:BCFTOOLS_SORT (D2513567) | 7 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 7
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (23)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[43/6cd4f2] NFC…TOOLS_SORT_TRGT (D2513567) | 7 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 7
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 7 of 8
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 7
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (23)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[43/6cd4f2] NFC…TOOLS_SORT_TRGT (D2513567) | 7 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 7
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (24)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 7 of 8
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 7
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (24)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX | 0 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (25)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[11/ebe27d] NFC…:BCFTOOLS_INDEX (D2327066) | 0 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (25)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT | 0 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[11/ebe27d] NFC…:BCFTOOLS_INDEX (D2327066) | 1 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (26)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[4a/255b7f] NFC…OOLS_INDEX_TRGT (D2327066) | 0 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[11/ebe27d] NFC…:BCFTOOLS_INDEX (D2327066) | 1 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (26)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[4a/255b7f] NFC…OOLS_INDEX_TRGT (D2327066) | 1 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[11/ebe27d] NFC…:BCFTOOLS_INDEX (D2327066) | 1 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 1
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (27)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[4a/255b7f] NFC…OOLS_INDEX_TRGT (D2327066) | 1 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[13/9ffa44] NFC…:BCFTOOLS_INDEX (D2322128) | 1 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 1
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (27)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[4a/255b7f] NFC…OOLS_INDEX_TRGT (D2327066) | 1 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[13/9ffa44] NFC…:BCFTOOLS_INDEX (D2322128) | 2 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 1
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (28)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[9e/a2a202] NFC…OOLS_INDEX_TRGT (D2322128) | 1 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[13/9ffa44] NFC…:BCFTOOLS_INDEX (D2322128) | 2 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 1
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (28)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[9e/a2a202] NFC…OOLS_INDEX_TRGT (D2322128) | 2 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[13/9ffa44] NFC…:BCFTOOLS_INDEX (D2322128) | 2 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 2
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (29)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[9e/a2a202] NFC…OOLS_INDEX_TRGT (D2322128) | 2 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/37420b] NFC…:BCFTOOLS_INDEX (D2402599) | 2 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 2
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (29)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[9e/a2a202] NFC…OOLS_INDEX_TRGT (D2322128) | 2 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/37420b] NFC…:BCFTOOLS_INDEX (D2402599) | 3 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 2
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (30)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[7e/058875] NFC…OOLS_INDEX_TRGT (D2402599) | 2 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/37420b] NFC…:BCFTOOLS_INDEX (D2402599) | 3 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 2
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (30)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[7e/058875] NFC…OOLS_INDEX_TRGT (D2402599) | 3 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/37420b] NFC…:BCFTOOLS_INDEX (D2402599) | 3 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 3
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (31)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[7e/058875] NFC…OOLS_INDEX_TRGT (D2402599) | 3 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/f6d8cd] NFC…:BCFTOOLS_INDEX (D2513633) | 3 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 3
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (31)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[7e/058875] NFC…OOLS_INDEX_TRGT (D2402599) | 3 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/f6d8cd] NFC…:BCFTOOLS_INDEX (D2513633) | 4 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 3
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (32)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[21/a72e80] NFC…OOLS_INDEX_TRGT (D2513633) | 3 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/f6d8cd] NFC…:BCFTOOLS_INDEX (D2513633) | 4 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 3
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (32)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[21/a72e80] NFC…OOLS_INDEX_TRGT (D2513633) | 4 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/f6d8cd] NFC…:BCFTOOLS_INDEX (D2513633) | 4 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 4
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (33)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[21/a72e80] NFC…OOLS_INDEX_TRGT (D2513633) | 4 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[8e/32530d] NFC…:BCFTOOLS_INDEX (D2404852) | 4 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 4
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (33)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[21/a72e80] NFC…OOLS_INDEX_TRGT (D2513633) | 4 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[8e/32530d] NFC…:BCFTOOLS_INDEX (D2404852) | 5 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 4
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (34)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[87/60d287] NFC…OOLS_INDEX_TRGT (D2404852) | 4 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[8e/32530d] NFC…:BCFTOOLS_INDEX (D2404852) | 5 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 4
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (34)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[87/60d287] NFC…OOLS_INDEX_TRGT (D2404852) | 5 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[8e/32530d] NFC…:BCFTOOLS_INDEX (D2404852) | 5 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 5
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (35)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[87/60d287] NFC…OOLS_INDEX_TRGT (D2404852) | 5 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/114ab0] NFC…:BCFTOOLS_INDEX (D2518587) | 5 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 5
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (35)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[87/60d287] NFC…OOLS_INDEX_TRGT (D2404852) | 5 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/114ab0] NFC…:BCFTOOLS_INDEX (D2518587) | 6 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 5
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (36)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[e6/26d32a] NFC…OOLS_INDEX_TRGT (D2518587) | 5 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/114ab0] NFC…:BCFTOOLS_INDEX (D2518587) | 6 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 5
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (36)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[e6/26d32a] NFC…OOLS_INDEX_TRGT (D2518587) | 6 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[2b/114ab0] NFC…:BCFTOOLS_INDEX (D2518587) | 6 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 6
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (37)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[e6/26d32a] NFC…OOLS_INDEX_TRGT (D2518587) | 6 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[c1/c1027c] NFC…:BCFTOOLS_INDEX (D2513567) | 6 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 6
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (37)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[e6/26d32a] NFC…OOLS_INDEX_TRGT (D2518587) | 6 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[c1/c1027c] NFC…:BCFTOOLS_INDEX (D2513567) | 7 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 6
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (38)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[da/4b3885] NFC…OOLS_INDEX_TRGT (D2513567) | 6 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[c1/c1027c] NFC…:BCFTOOLS_INDEX (D2513567) | 7 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 6
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (38)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[da/4b3885] NFC…OOLS_INDEX_TRGT (D2513567) | 7 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[c1/c1027c] NFC…:BCFTOOLS_INDEX (D2513567) | 7 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 7
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (39)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[da/4b3885] NFC…OOLS_INDEX_TRGT (D2513567) | 7 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 7 of 8
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 7
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (39)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[da/4b3885] NFC…OOLS_INDEX_TRGT (D2513567) | 7 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 7
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (40)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 7 of 8
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 7
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (40)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT | 0 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (41)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[57/3dac33] NFC…ATION:TRGT_PLOT (D2327066) | 0 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (41)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[57/3dac33] NFC…ATION:TRGT_PLOT (D2327066) | 1 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (42)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[1a/218b61] NFC…ATION:TRGT_PLOT (D2322128) | 1 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (42)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[1a/218b61] NFC…ATION:TRGT_PLOT (D2322128) | 2 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (43)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[b7/e064b4] NFC…ATION:TRGT_PLOT (D2402599) | 2 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (43)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[b7/e064b4] NFC…ATION:TRGT_PLOT (D2402599) | 3 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (44)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[a9/350330] NFC…ATION:TRGT_PLOT (D2513633) | 3 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (44)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[a9/350330] NFC…ATION:TRGT_PLOT (D2513633) | 3 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (44)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[a9/350330] NFC…ATION:TRGT_PLOT (D2513633) | 4 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (45)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[6d/b37211] NFC…ATION:TRGT_PLOT (D2404852) | 4 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (45)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[6d/b37211] NFC…ATION:TRGT_PLOT (D2404852) | 4 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (45)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[6d/b37211] NFC…ATION:TRGT_PLOT (D2404852) | 5 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (46)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4b/17ec84] NFC…ATION:TRGT_PLOT (D2518587) | 5 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (46)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4b/17ec84] NFC…ATION:TRGT_PLOT (D2518587) | 5 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (46)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4b/17ec84] NFC…ATION:TRGT_PLOT (D2518587) | 6 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (47)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4c/986024] NFC…ATION:TRGT_PLOT (D2513567) | 6 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (47)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4c/986024] NFC…ATION:TRGT_PLOT (D2513567) | 6 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (47)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[4c/986024] NFC…ATION:TRGT_PLOT (D2513567) | 7 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (48)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 7 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (48)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 7 of 8
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (48)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   | 0 of 1
+
+executor >  local (49)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[b2/700c7d] NFCORE_PACVAR:PACVAR:MULTIQC   | 0 of 1
+
+executor >  local (49)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[b2/700c7d] NFCORE_PACVAR:PACVAR:MULTIQC   | 0 of 1
+
+executor >  local (49)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[b2/700c7d] NFCORE_PACVAR:PACVAR:MULTIQC   | 1 of 1 ✔
+
+executor >  local (49)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[b2/700c7d] NFCORE_PACVAR:PACVAR:MULTIQC   | 1 of 1 ✔
+-[nf-core/pacvar] Pipeline completed successfully-
+
+executor >  local (49)
+[88/397264] NFC…VAR:PBMM2_ALIGN (D2327066) | 8 of 8, cached: 8 ✔
+[61/91e1d6] NFC…R:SAMTOOLS_SORT (D2404852) | 8 of 8, cached: 8 ✔
+[23/ede463] NFC…:SAMTOOLS_INDEX (D2518587) | 8 of 8, cached: 8 ✔
+[f8/7d51a8] NFC…N:TRGT_GENOTYPE (D2406378) | 8 of 8 ✔
+[c4/87d9ae] NFC…TOOLS_SORT_TRGT (D2406378) | 8 of 8 ✔
+[5e/757ba9] NFC…OOLS_INDEX_TRGT (D2406378) | 8 of 8 ✔
+[1b/a68c02] NFC…N:BCFTOOLS_SORT (D2406378) | 8 of 8 ✔
+[e0/54c10c] NFC…:BCFTOOLS_INDEX (D2406378) | 8 of 8 ✔
+[9e/b2c461] NFC…ATION:TRGT_PLOT (D2406378) | 8 of 8 ✔
+[b2/700c7d] NFCORE_PACVAR:PACVAR:MULTIQC   | 1 of 1 ✔
+-[nf-core/pacvar] Pipeline completed successfully-
+Completed at: 12-Dec-2025 17:49:59
+Duration    : 1m 46s
+CPU hours   : 24.5 (99.6% cached)
+Succeeded   : 49
+Cached      : 24
+
+
