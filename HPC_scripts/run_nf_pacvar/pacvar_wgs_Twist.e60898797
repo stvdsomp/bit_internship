@@ -1,2 +1,0 @@
-Nextflow 25.10.2 is available - Please consider updating your version to it
-slurmstepd: error: Detected 31 oom_kill events in StepId=60898797.batch. Some of the step tasks have been OOM Killed.

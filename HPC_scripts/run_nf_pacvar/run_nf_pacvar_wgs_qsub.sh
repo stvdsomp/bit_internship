@@ -6,10 +6,8 @@
 #PBS -m abe
 #PBS -N pacvar_wgs_Twist
 
-export NXF_HOME=/data/gent/422/vsc42287/.nextflow
-export NXF_WORK=/data/gent/422/vsc42287/work
-export APPTAINER_CACHEDIR=/data/gent/422/vsc42287/.apptainer
-export APPTAINER_TMPDIR=/data/gent/422/vsc42287/.apptainer/tmp
+export NXF_HOME=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/.nextflow
+export NXF_WORK=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/work
 
 module load Nextflow/25.04.8
 
