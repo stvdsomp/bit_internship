@@ -1,0 +1,2 @@
+sample,bam,pbi,fail
+sample1,/home/svdsompe/BIT11/local_input/demux_raw/m84299_251021_160938_s1.hifi_reads_SS.bam,/home/svdsompe/BIT11/local_input/demux_raw/m84299_251021_160938_s1.hifi_reads_SS.bam.bai,/home/svdsompe/BIT11/local_input/demux_raw/m84299_251021_160938_s1.fail_reads_SS.bam
