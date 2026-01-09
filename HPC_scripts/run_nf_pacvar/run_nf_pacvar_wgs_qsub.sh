@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #PBS -l walltime=6:00:00
-#PBS -l nodes=1:ppn=96
+#PBS -l nodes=1:ppn=32
 #PBS -l mem=64gb
 #PBS -m abe
 #PBS -N pacvar_wgs_Twist

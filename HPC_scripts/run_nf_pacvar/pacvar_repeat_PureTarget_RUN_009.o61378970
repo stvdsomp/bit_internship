@@ -1,0 +1,189 @@
+
+ N E X T F L O W   ~  version 25.04.8
+
+Pulling stvdsomp/pacvar ...
+ Already-up-to-date
+Launching `https://github.com/stvdsomp/pacvar` [chaotic_liskov] DSL2 - revision: 769e02973b [dev_pbmerge_post]
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/pacvar 1.0.1
+------------------------------------------------------
+Input/output options
+  input                     : /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/samplesheet_RUN_009.csv
+  outdir                    : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/RUN_009
+
+Reference genome options
+  fasta                     : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa
+  fasta_fai                 : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/hg38-noalt.fa.fai
+
+Institutional config options
+  config_profile_description: Configuration profile for execution of Nextflow pipelines on the VSC UGhent HPC.
+  config_profile_contact    : ict@cmgg.be
+  config_profile_url        : https://www.ugent.be/hpc/en
+
+Pre-processing options that are not workflow specific
+  skip_demultiplexing       : true
+  intervals                 : /kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/bin/roi/PureTarget_repeat_expansion_panel_2.0.repeat_definition.GRCh38.bed
+
+General workflow options
+  workflow                  : repeat
+
+Generic options
+  trace_report_suffix       : 2026-01-09_17-48-20
+
+Core Nextflow options
+  revision                  : dev_pbmerge_post
+  runName                   : chaotic_liskov
+  containerEngine           : singularity
+  container.LIMA            : https://depot.galaxyproject.org/singularity/lima:2.13.0--h9ee0642_0
+  container.TRGT_GENOTYPE   : https://depot.galaxyproject.org/singularity/trgt:4.0.0--h9ee0642_0
+  container.TRGT_PLOT       : https://depot.galaxyproject.org/singularity/trgt:4.0.0--h9ee0642_0
+  launchDir                 : /kyukon/home/gent/422/vsc42287
+  workDir                   : /scratch/gent/vo/000/gvo00082/vsc42287/work
+  projectDir                : /user/gent/422/vsc42287/.nextflow/assets/stvdsomp/pacvar
+  userName                  : vsc42287
+  profile                   : vsc_ugent
+  configFiles               : /user/gent/422/vsc42287/.nextflow/assets/stvdsomp/pacvar/nextflow.config, /kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/my_config_PureTarget_09.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+* The pipeline
+    https://doi.org/10.5281/zenodo.14813048
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/pacvar/blob/master/CITATIONS.md
+
+WARN: The following invalid input values have been detected:
+
+* --max_memory: 250 GB
+* --max_cpus: 96
+* --max_time: 3day
+
+
+[-        ] NFC…_PACVAR:PACVAR:PBMM2_ALIGN -
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+
+[-        ] NFC…_PACVAR:PACVAR:PBMM2_ALIGN -
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+
+[-        ] NFC…_PACVAR:PACVAR:PBMM2_ALIGN | 0 of 4
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (1)
+[fc/d2000d] NFC…R:PBMM2_ALIGN (Dhm2500033) | 0 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (1)
+[fc/d2000d] NFC…R:PBMM2_ALIGN (Dhm2500033) | 1 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (2)
+[c0/a32427] NFC…M2_ALIGN (Control1_PacBio) | 1 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (2)
+[c0/a32427] NFC…M2_ALIGN (Control1_PacBio) | 2 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (3)
+[23/6c71c3] NFC…M2_ALIGN (Control1_PacBio) | 2 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (3)
+[23/6c71c3] NFC…M2_ALIGN (Control1_PacBio) | 3 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
+
+executor >  local (4)
+[bf/007ebe] NFC…M2_ALIGN (Control2_PacBio) | 3 of 16
+[-        ] NFC…PACVAR:PACVAR:PBTK_PBMERGE -
+[-        ] NFC…ACVAR:PACVAR:SAMTOOLS_SORT -
+[-        ] NFC…CVAR:PACVAR:SAMTOOLS_INDEX -
+[-        ] NFC…ACTERIZATION:TRGT_GENOTYPE -
+[-        ] NFC…IZATION:SAMTOOLS_SORT_TRGT -
+[-        ] NFC…ZATION:SAMTOOLS_INDEX_TRGT -
+[-        ] NFC…ACTERIZATION:BCFTOOLS_SORT -
+[-        ] NFC…CTERIZATION:BCFTOOLS_INDEX -
+[-        ] NFC…CHARACTERIZATION:TRGT_PLOT -
+[-        ] NFCORE_PACVAR:PACVAR:MULTIQC   -
