@@ -4,7 +4,7 @@
 #PBS -l nodes=1:ppn=16
 #PBS -l mem=32gb
 #PBS -m abe
-#PBS -N pacvar_repeat_PureTarget_RUN_009
+#PBS -N pacvar_repeat_PureTarget
 
 module load Nextflow/25.04.8
 

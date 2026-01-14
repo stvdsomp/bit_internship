@@ -3,6 +3,8 @@
 #module swap cluster/donphan
 #qsub -I -l nodes=1:ppn=8,mem=24gb,walltime=03:00:00
 
+module load Nextflow/25.04.8
+
 nextflow run stvdsomp/pacvar \
    -r dev_personal \
    -latest \
