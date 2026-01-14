@@ -110,6 +110,10 @@ def write_trid_blocks(data, samples, RUN_NR, out_file):
 
 def main():
 
+    if len(sys.argv) != 2:
+        print(f"\nUsage: python compare_merging_v1.py <009|010|011|...>\n")
+        sys.exit(1)
+
     RUN_NR = sys.argv[1]
 
     RUN1 = f"/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/RUN_{RUN_NR}/bcftools"

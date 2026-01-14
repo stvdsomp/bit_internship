@@ -3,6 +3,7 @@ This folder contains Python scripts for formatting ``nf-core/pacvar`` outputs an
 
 ## Files
 - `color_motifs_test.py` - Python script to test the visualization of motifs
+- `compare_merging.py` - Python script to compare nf-core/pacvar outputs (with vs without merging of fail reads) 
 - `generate_puretarget_xlsx_report_v*.py` - Python script for generating Excel reports
 - `run_color_motifs_test.sh` - shell wrapper to run the motif visualization tests
 - `run_puretarget_xlsx_report_v*.sh` - shell wrapper to run the report script

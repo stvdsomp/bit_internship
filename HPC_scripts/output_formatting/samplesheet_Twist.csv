@@ -1,1 +1,17 @@
 sample,vcf
+D2513633,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_9_A02_F--16_UDI_9_A02_R.sorted.vcf.gz
+D2513567,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_10_B02_F--16_UDI_10_B02_R.sorted.vcf.gz
+D2402599,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_11_C02_F--16_UDI_11_C02_R.sorted.vcf.gz
+D2404852,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_12_D02_F--16_UDI_12_D02_R.sorted.vcf.gz
+D2322128,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_13_E02_F--16_UDI_13_E02_R.sorted.vcf.gz
+D2406378,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_14_F02_F--16_UDI_14_F02_R.sorted.vcf.gz
+D2518587,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_15_G02_F--16_UDI_15_G02_R.sorted.vcf.gz
+D2327066,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux/bcftools/m84299_251021_160938_s1.16_UDI_16_H02_F--16_UDI_16_H02_R.sorted.vcf.gz
+D2513633_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_9_A02_F--16_UDI_9_A02_R.sorted.vcf.gz
+D2513567_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_10_B02_F--16_UDI_10_B02_R.sorted.vcf.gz
+D2402599_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_11_C02_F--16_UDI_11_C02_R.sorted.vcf.gz
+D2404852_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_12_D02_F--16_UDI_12_D02_R.sorted.vcf.gz
+D2322128_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_13_E02_F--16_UDI_13_E02_R.sorted.vcf.gz
+D2406378_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_14_F02_F--16_UDI_14_F02_R.sorted.vcf.gz
+D2518587_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_15_G02_F--16_UDI_15_G02_R.sorted.vcf.gz
+D2327066_noFail,/kyukon/data/gent/vo/000/gvo00082/research/ICT/VAL/Revio_PureTarget/analysis_SVS/pacvar/Twist_demux_noFail/bcftools/m84299_251021_160938_s1.16_UDI_16_H02_F--16_UDI_16_H02_R.sorted.vcf.gz
