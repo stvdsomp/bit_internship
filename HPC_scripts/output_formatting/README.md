@@ -10,7 +10,11 @@ This folder contains Python scripts for formatting ``nf-core/pacvar`` outputs an
 - `run_reporting_pipeline.sh` - shell wrapper to the reporting script via the cmgg/report Nextflow pipeline
 - `samplesheet*.csv` - samplesheet used as input for cmgg/report Nextflow pipeline
 
-## Versions
+## Versions (compare_merging)
+- `v1` - Generates one TSV file containing all metrics for the eight samples of a specific run (with vs without merging of fail reads) 
+- `v2` - Generates one TSV file containing one specific metric for the eight samples of a specific run (with vs without merging of fail reads) 
+
+## Versions (puretarget_xlsx_report)
 - `v1` - Generates one Excel file for each repeat of interest defined in the samplesheet. This approach ensures that only the genotype of the targeted repeat is visible to lab technicians and supervisors, minimizing exposure to incidental findings.
 - `v2` - Generates a single comprehensive Excel file containing genotypes for all repeats present in the VCF output of `nf-core/pacvar`. A menu sheet with dropdown menu and hyperlink will guide users to the repeat of interest, while still limiting the risk of incidental findings.
 
