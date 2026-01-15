@@ -11,7 +11,8 @@ bit_internship/
 │   ├── output_formatting/   # Formatting nf-core/pacvar outputs, generating Excel reports with motif visualization
 │   ├── pbmerge_bam/         # Merging HiFi and fail BAM files using pbtk/pbmerge (isolated)
 │   ├── puretarget_analysis/ # PureTarget analysis scripts, QC, coverage summaries, and job generation
-│   └── run_nf_pacvar/       # Scripts and configs to run nf-core/pacvar using PBS job scheduling
+│   ├── run_nf_pacvar/       # Scripts and configs to run nf-core/pacvar using PBS job scheduling
+│   └── target_coverage/     # Creating graphs with target coverage distributions
 │
 └── WSL2_scripts/
     ├── output_formatting/   # Initial, local versions of output formatting scripts
