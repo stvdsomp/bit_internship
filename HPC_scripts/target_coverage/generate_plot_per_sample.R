@@ -7,18 +7,18 @@ library(stringr)
 library(viridis)
 
 # Setup
-run_id <- "RUN_011"
-out_pdf <- paste0(run_id, "_coverage_boxplot.pdf")
+run_id <- "RUN_009"
+out_pdf <- paste0(run_id, "_coverage_boxplot_per_sample.pdf")
 tsv_file <- paste0(run_id, "_cov_summary.tsv")
 
 # Load data
 df <- read.table(tsv_file, header=TRUE, sep="\t")
 
-# Clean repeat ID names
-df$region_short <- str_match(df$region, "ID=([^;>]+)")[,2]
+# Clean sample names
+df$sample_short <- str_remove(df$sample, "_hifi\\.aligned\\.bam$")
 
 # Generate boxplots
-p <- ggplot(df, aes(x = region_short, y = coverage, fill = region_short)) +
+p <- ggplot(df, aes(x = sample_short, y = coverage, fill = sample)) +
   geom_boxplot(outlier.size = 0.5, alpha = 0.85) +
   scale_fill_viridis_d(option = "turbo", guide = "none") +
   theme_bw() +
@@ -28,9 +28,9 @@ p <- ggplot(df, aes(x = region_short, y = coverage, fill = region_short)) +
     panel.grid.major.x = element_blank()
   ) +
   labs(
-    x = "Region of Interest",
-    y = "Mean Read Coverage",
-    title = "Read Coverage per Region"
+    x = "Sample",
+    y = "Mean read coverage (on-target)",
+    title = paste0("Read coverage per sample (", run_id, ")")
   )
 
 # Save to PDF
