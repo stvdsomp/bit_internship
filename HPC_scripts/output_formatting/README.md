@@ -5,7 +5,7 @@ This folder contains Python scripts for formatting ``nf-core/pacvar`` outputs an
 - `color_motifs_test.py` - Python script to test the visualization of motifs
 - `compare_merging.py` - Python script to compare nf-core/pacvar outputs (with vs without merging of fail reads) 
 - `generate_puretarget_xlsx_report_v*.py` - Python script for generating Excel reports
-- `run_color_motifs_test.sh` - shell wrapper to run the motif visualization tests
+- `rename.sh` - shell script to rename generated Excel files
 - `run_puretarget_xlsx_report_v*.sh` - shell wrapper to run the report script
 - `run_reporting_pipeline.sh` - shell wrapper to the reporting script via the cmgg/report Nextflow pipeline
 - `samplesheet*.csv` - samplesheet used as input for cmgg/report Nextflow pipeline
