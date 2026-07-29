@@ -7,7 +7,7 @@ This folder contains Python scripts for formatting ``nf-core/pacvar`` outputs an
 - `generate_puretarget_xlsx_report_v*.py` - Python script for generating Excel reports
 - `rename.sh` - shell script to rename generated Excel files
 - `run_puretarget_xlsx_report_v*.sh` - shell wrapper to run the report script
-- `run_reporting_pipeline.sh` - shell wrapper to the reporting script via the cmgg/report Nextflow pipeline
+- `run_reporting_pipeline_*.sh` - shell wrapper to the reporting script via forks of the nf-cmgg/report Nextflow pipeline
 - `samplesheet*.csv` - samplesheet used as input for cmgg/report Nextflow pipeline
 
 ## Versions (compare_merging)

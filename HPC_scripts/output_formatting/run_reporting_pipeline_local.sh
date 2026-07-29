@@ -3,7 +3,7 @@
 # conda activate nextflow 
 
 nextflow run stvdsomp/report \
-   -r dev_pacvar_repeat \
+   -r pacvar_repeat_nextflow-25 \
    -latest \
    -profile vsc_ugent \
    --pacvar_repeat.input samplesheet_RUN_025.csv \
