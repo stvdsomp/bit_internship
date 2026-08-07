@@ -2,7 +2,7 @@
 
 #PBS -l walltime=12:00:00
 #PBS -l nodes=1:ppn=32
-#PBS -l mem=32gb
+#PBS -l mem=64gb
 #PBS -m abe
 #PBS -N pacvar_repeat_PureTarget
 
