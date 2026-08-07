@@ -7,7 +7,7 @@ library(stringr)
 library(viridis)
 
 # Setup
-run_id <- "RUN_025"
+run_id <- "RUN_011_v1.1.0"
 out_pdf <- paste0(run_id, "_coverage_boxplot_per_sample.pdf")
 tsv_file <- paste0(run_id, "_cov_summary.tsv")
 

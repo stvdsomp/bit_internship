@@ -1,18 +1,18 @@
 #!/bin/bash
 
-#PBS -l walltime=6:00:00
+#PBS -l walltime=12:00:00
 #PBS -l nodes=1:ppn=32
 #PBS -l mem=64gb
 #PBS -m abe
-#PBS -N pacvar_wgs_Twist
+#PBS -N pacvar_wgs
 
-export NXF_HOME=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/.nextflow
-export NXF_WORK=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/work
+#export NXF_HOME=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/.nextflow
+#export NXF_WORK=/kyukon/scratch/gent/vo/000/gvo00082/vsc42287/work
 
-module load Nextflow/25.04.8
+module load Nextflow/26.04.3 awscli
 
-nextflow run nf-core/pacvar \
-   -r master \
+nextflow run stvdsomp/pacvar \
+   -r v1.1.0_nextflow-26 \
    -latest \
    -profile vsc_ugent \
-   -c "/kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/my_config_Twist_wgs.config"
+   -c "/kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/my_config_wgs.config"
