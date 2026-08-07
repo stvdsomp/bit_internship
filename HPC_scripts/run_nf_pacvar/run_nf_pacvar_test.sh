@@ -6,7 +6,7 @@
 module load Nextflow/25.04.8
 
 nextflow run stvdsomp/pacvar \
-   -r dev_personal \
+   -r v1.0.1_nextflow-25 \
    -latest \
    -profile test,vsc_ugent \
    -c my_config_test.config

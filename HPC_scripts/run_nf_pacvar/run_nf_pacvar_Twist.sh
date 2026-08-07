@@ -9,7 +9,8 @@
 module load Nextflow/25.04.8
 
 nextflow run stvdsomp/pacvar \
-   -r dev_pbmerge_post \
+   -r v1.0.1_nextflow-25 \
    -latest \
+   -resume \
    -profile vsc_ugent \
    -c "/kyukon/home/gent/422/vsc42287/BIT11/sync/HPC_scripts/run_nf_pacvar/my_config_Twist.config"
